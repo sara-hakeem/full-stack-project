@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AshbalAlfan": {
+    "AshbalAlfanAdmin": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ashbal-alfan",
+            "outputPath": "dist/ashbal-alfan-admin",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,15 +28,10 @@
               "src/assets"
             ],
             "styles": [
-             
+              "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
-              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
-              "src/styles.scss"
-
-              
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
@@ -46,12 +41,11 @@
           },
           "configurations": {
             "production": {
-
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "700kb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -82,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AshbalAlfan:build:production"
+              "browserTarget": "AshbalAlfanAdmin:build:production"
             },
             "development": {
-              "browserTarget": "AshbalAlfan:build:development"
+              "browserTarget": "AshbalAlfanAdmin:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AshbalAlfan:build"
+            "browserTarget": "AshbalAlfanAdmin:build"
           }
         },
         "test": {
@@ -118,6 +112,6 @@
     }
   },
   "cli": {
-    "analytics": "8bd4088b-84f7-4fd8-a7e3-12af27248eb7"
+    "analytics": "fd5d4582-d5c5-4b8c-89ee-0f52bd8ffec8"
   }
 }
